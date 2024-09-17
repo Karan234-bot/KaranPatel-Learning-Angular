@@ -10,6 +10,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
     title = 'KaranPatel-LearningAngular';
-    movie: string = 'Chak de India';
-    phone: string = 'Iphone 16 pro';
+    Car: string = 'M430i';
+    Brand: string = 'BMW';
+    Type: string = 'Sedan-Sport';
+    Color: string = 'Matt Black';
+    Year: string = '2023';
+    Origin: string = 'German'
 }
