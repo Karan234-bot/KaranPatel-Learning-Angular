@@ -1,7 +1,9 @@
-<h1>Hello, {{ Car }}</h1>
-<h1>Hello, {{ Brand }}</h1>
-<h1>Hello, {{ Type }}</h1>
-<h1>Hello, {{ Color }}</h1>
-<h1>Hello, {{ Year }}</h1>
-<h1>Hello, {{ Origin }}</h1>
-
+<div class="container">
+  <h2>Car List</h2>
+  <div *ngFor="let User of Carlist" class="user-card">
+    <h3>{{ Car.Brand }} {{ Car.CarName }}</h3>
+    <p>Color: {{ Car.Color }}</p>
+    <p>Model: {{Car.Model}}</p>
+    <p>Type: {{ Car.Type }}</p>
+  </div>
+</div>
