@@ -1,1 +1,8 @@
-<p>car-list-item works!</p>
+<h1>Hello, {{ Car }}</h1>
+<div  *ngIf="Car" class="dabo">
+  <h1>Brand, {{ Car.Brand }}</h1>
+  <h1>Type, {{ Car.Type }}</h1>
+  <h1>Color, {{ Car.Color }}</h1>
+  <h1>Year, {{ Car.Year }}</h1>
+  <h1>Origin, {{ Car.Origin }}</h1>
+</div>

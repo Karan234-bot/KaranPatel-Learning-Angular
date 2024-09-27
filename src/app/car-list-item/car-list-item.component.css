@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  width: 100%;
+}
+.dabo{
+  border: 3px solid black;
+}
+h1{
+  text-align: center;
+  color: aliceblue;
+  margin: 25px;
+}
