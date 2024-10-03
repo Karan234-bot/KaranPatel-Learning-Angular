@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import {Car} from "/Shared/Modules/Car";
 import {NgForOf, NgIf} from "@angular/common";
 import {CarListComponent} from "./car-list/car-list.component";
+import {userList} from "./Shared/mockCar";
 
 @Component({
   selector: 'app-root',
@@ -14,5 +15,7 @@ import {CarListComponent} from "./car-list/car-list.component";
 })
 export class AppComponent {
   title= 'Car';
+  protected readonly CarListComponent = CarListComponent;
+  protected readonly userList = userList;
 }
 
