@@ -3,7 +3,7 @@
   <tbody>
   <tr *ngFor = "let car of Carlist">
     <td colspan="5">
-      <app-car-list-item [Car]="car" [ngClass]="{'safed':i%2==0,'karu':i%2!=0 }"></app-car-list-item>
+      <app-car-list-item [car]="car" [ngClass]="{'safed':i%2==0,'karu':i%2!=0 }"></app-car-list-item>
     </td>
   </tr>
   </tbody>

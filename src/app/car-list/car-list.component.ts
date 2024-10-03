@@ -1,7 +1,8 @@
 import {Component, Input} from '@angular/core';
-import {Car} from "../Shared/Modules/Car"
+import {car} from "../Shared/Modules/Car"
 import {CarListItemComponent} from "../car-list-item/car-list-item.component";
 import {NgClass, NgForOf} from "@angular/common";
+import {Observable, of} from "rxjs";
 
 @Component({
   selector: 'app-car-list',
@@ -11,8 +12,33 @@ import {NgClass, NgForOf} from "@angular/common";
   styleUrl: './car-list.component.css'
 })
 export class CarListComponent {
-  Car1 : Car = {Brand: "BMW", CarName: "M4", Color: "Black", Model: "2023", Type: "Sedan"};
-  Car2 : Car = {Brand: "Toyota", CarName: "Rav4", Model: "2003", Color: "Faded-Black",Type: "Suv"};
+  car1 : car = {isGasFull: false, Brand: "BMW", CarName: "M4", Color: "Black", Model: "2023", Type: "Sedan"};
+  car2 : car = {isGasFull: false, Brand: "Toyota", CarName: "Rav4", Model: "2003", Color: "Faded-Black",Type: "Suv"};
 
-  Carlist: Car[] = [this.Car1, this.Car2,]
+  Carlist: car[] = [this.car1, this.car2,];
+  constructor() {}
+  getcar(): Observable<car[]> {
+    return of(this.Carlist);
+  }
+  addcar(newCar: car) : Observable<car> {
+    this.Carlist.push(newCar)
+    // @ts-ignore
+    return of(this.Carlist);
+  }
+  // @ts-ignore
+  updateCar(newCar: car) : Observable<car> {
+    const index = this.Carlist.findIndex(newCar => newCar.Brand === newCar.Brand);
+    if (index > -1) {
+      this.Carlist[index].CarName = newCar.CarName;
+    }
+  }
+  // @ts-ignore
+  deletecar(newCar: number) : Observable<car[]> {
+    this.Carlist = this.Carlist.filter(newCar => newCar.Brand === newCar.Brand);
+    return of(this.Carlist);
+  }
+  // @ts-ignore
+  getcarById(newCar: number) : Observable<car | undefined> {
+    const Car = this.Carlist.findIndex(newCar =>newCar.Brand === newCar.Brand);
+  }
 }

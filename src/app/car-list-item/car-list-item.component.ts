@@ -1,5 +1,6 @@
 import {Component, Input, input} from '@angular/core';
 import {NgIf} from "@angular/common";
+import {car} from "../Shared/Modules/Car";
 
 @Component({
   selector: 'app-car-list-item',
@@ -11,6 +12,7 @@ import {NgIf} from "@angular/common";
   styleUrl: './car-list-item.component.css'
 })
 export class CarListItemComponent {
-  @input() Car?: Car;
+  // @ts-ignore
+  @Input() car!: car;
 
 }

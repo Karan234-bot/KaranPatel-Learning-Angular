@@ -1,5 +1,5 @@
-export interface Car {
-  Brand: number,
+export interface car {
+  Brand: String,
   CarName: string,
   Color: string,
   Model: string,
