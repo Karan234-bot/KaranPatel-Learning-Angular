@@ -11,7 +11,7 @@ import {car} from "../Shared/Modules/Car";
   templateUrl: './car-list-item.component.html',
   styleUrl: './car-list-item.component.css'
 })
-export class CarListItemComponent {
+export class CarListItemComponent{
   // @ts-ignore
   @Input() car!: car;
 
