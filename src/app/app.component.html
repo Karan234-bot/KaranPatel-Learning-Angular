@@ -1,13 +1,9 @@
+<div class="navigationBar">
+  <nav>
+    <a routerLink="/userList" routerLinkActive="active">List</a>
+    <a routerLink="modify-list-item" routerLinkActive="active">Modify-List</a>
+  </nav>
+</div>
 <div class="container">
-  <h2>User List</h2>
-  <div *ngFor="let user of userList" class="user-card">
-    <h3>{{ user.Brand }} {{ user.Model }}</h3>
-    <p>Type: {{ user.Type }}</p>
-    <p>Color: {{ user.Color }}</p>
-    <p>isGasFull: {{ user.isGasFull ? 'Ture' : 'False' }}</p>
-  </div>
-
-  <div class="app-container">
-    <h1>{{ title }}</h1>
-    <app-student-list></app-student-list> </div>
+  <router-outlet></router-outlet>
 </div>

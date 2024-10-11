@@ -1,8 +1,9 @@
 export interface car {
-  Brand: String,
-  CarName: string,
-  Color: string,
-  Model: string,
-  Type: string,
-  isGasFull: boolean,
+  Brand: string;
+  CarName: string;
+  Color: string;
+  Model: string;
+  Type: string;
+  isGasFull: boolean;
+  picture: string;
 }

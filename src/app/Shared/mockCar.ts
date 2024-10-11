@@ -6,7 +6,6 @@ import {car} from './Modules/Car';
 //available to other files
 
 export const userList: car[] = [
-  {isGasFull: false, Brand: "BMW", CarName: "M4", Color: "Black", Model: "2023", Type: "Sedan"},
-  {isGasFull: true, Brand: "Toyota", CarName: "Rav4", Model: "2003", Color: "Faded-Black",Type: "Suv"}
-//Add more as needed
+  {isGasFull: false, Brand: "BMW", CarName: "M4", Color: "Black", Model: "2023", Type: "Sedan",picture:"/assets/bmw.jpg"},
+  {isGasFull: true, Brand: "Toyota", CarName: "Rav4", Model: "2003", Color: "Faded-Black",Type: "Suv",picture:"/assets/rav4.jpg"},
 ];

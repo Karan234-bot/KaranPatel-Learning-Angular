@@ -12,8 +12,8 @@ import {Observable, of} from "rxjs";
   styleUrl: './car-list.component.css'
 })
 export class CarListComponent {
-  car1 : car = {isGasFull: false, Brand: "BMW", CarName: "M4", Color: "Black", Model: "2023", Type: "Sedan"};
-  car2 : car = {isGasFull: false, Brand: "Toyota", CarName: "Rav4", Model: "2003", Color: "Faded-Black",Type: "Suv"};
+  car1 : car = {isGasFull: false, Brand: "BMW", CarName: "M4", Color: "Black", Model: "2023", Type: "Sedan", picture:"assets/bmw.jpg"};
+  car2 : car = {isGasFull: false, Brand: "Toyota", CarName: "Rav4", Model: "2003", Color: "Faded-Black",Type: "Suv", picture:"assets/rav4.jpg"};
 
   Carlist: car[] = [this.car1, this.car2,];
   constructor() {}
